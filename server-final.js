@@ -50,18 +50,21 @@ app.use(helmet({
 // Rate Limiting
 const formLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 3, // 3 form submissions per 15 minutes
+    max: 10, // 10 form submissions per 15 minutes (increased from 3)
     message: { success: false, message: 'Too many form submissions. Please try again in 15 minutes.' },
     standardHeaders: true, legacyHeaders: false,
 });
 
 const generalLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // 100 requests per 15 minutes
+    max: 1000, // 1000 requests per 15 minutes (increased from 100)
     standardHeaders: true, legacyHeaders: false,
 });
 
-app.use(generalLimiter);
+// Apply general rate limiting only in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(generalLimiter);
+}
 
 // Basic Middleware
 app.use(express.static('public'));

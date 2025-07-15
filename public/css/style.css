@@ -10,6 +10,8 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header Styles */
@@ -17,11 +19,9 @@ body {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: white;
     padding: 1rem 0;
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 0;
 }
 
 .top-bar {
@@ -135,17 +135,32 @@ body {
     cursor: pointer;
 }
 
+/* Ensure no gaps between header and hero */
+.header + .hero {
+    margin-top: -5px;
+    padding-top: 0;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(52, 152, 219, 0.8)), url('images/school-hero.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: calc(100vh - 140px);
     display: flex;
     align-items: center;
     text-align: center;
     color: white;
-    margin-top: 120px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    font-size: 0;
+    line-height: 0;
+}
+
+.hero-content {
+    font-size: initial;
+    line-height: 1.6;
 }
 
 .hero-content h1 {
@@ -1039,4 +1054,223 @@ input, select, textarea {
 
 .visible {
     display: block;
+}
+
+/* Contact Page Specific Styling */
+.contact-page .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-page .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.contact-page .form-group input,
+.contact-page .form-group textarea,
+.contact-page .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.contact-page .form-group input:focus,
+.contact-page .form-group textarea:focus,
+.contact-page .form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    transform: translateY(-1px);
+}
+
+.contact-page .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.contact-page .form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+/* Enhanced Contact Cards */
+.contact-page .feature-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-page .feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #3498db;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.15);
+}
+
+.contact-page .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2c3e50);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.contact-page .feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Enhanced Program Cards for Contact Info */
+.contact-page .program-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.contact-page .program-card:hover {
+    border-color: #3498db;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contact-page .program-image {
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-page .program-card:hover .program-image {
+    transform: scale(1.1);
+}
+
+/* Contact Form Container */
+.contact-form-container {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border: 1px solid #e9ecef;
+    position: relative;
+}
+
+.contact-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2c3e50);
+}
+
+/* Form Button Styling */
+.contact-page .btn-primary {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    border: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-page .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+.contact-page .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.contact-page .btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Form Row Improvements */
+.contact-page .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Section Title Enhancements for Contact Page */
+.contact-page .section-title h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.contact-page .section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2c3e50);
+    border-radius: 2px;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .contact-page .form-group input,
+    .contact-page .form-group textarea,
+    .contact-page .form-group select {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 15px;
+    }
+    
+    .contact-page .feature-card,
+    .contact-page .program-card {
+        margin-bottom: 1rem;
+    }
+    
+    .contact-page .btn-primary {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Loading Animation for Form Submission */
+.contact-page .btn-primary.loading {
+    color: transparent;
+    position: relative;
+}
+
+.contact-page .btn-primary.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
