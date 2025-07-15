@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus Facilities at Sree Vinayasree Vidyanikethan - Modern infrastructure and amenities for comprehensive education">
+    <title>Facilities - Sree Vinayasree Vidyanikethan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .facility-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .facility-image {
+            height: 250px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .facility-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+
+        .facility-content {
+            padding: 2rem;
+        }
+
+        .facility-content h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .facility-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .facility-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .facility-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+
+        .facility-features li:last-child {
+            border-bottom: none;
+        }
+
+        .facility-features li::before {
+            content: '✓';
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .infrastructure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span>📍 Lakshmi Bazar, Rayadurg-515865</span>
+                        <span>📞 School Code: 28221890931</span>
+                        <span>⏰ Opens at 9:00 AM</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                        <a href="#" aria-label="Email">✉️</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <div>
+                        <h1>Sree Vinayasree Vidyanikethan</h1>
+                        <p>Excellence in Education Since Years</p>
+                    </div>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/academics">Academics</a></li>
+                        <li><a href="/admissions">Admissions</a></li>
+                        <li><a href="/facilities">Facilities</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Facilities Hero -->
+    <section class="hero" style="height: 60vh; margin-top: 120px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>World-Class Facilities</h1>
+                <p>Modern Infrastructure for Complete Development</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-title" style="color: white; margin-bottom: 3rem;">
+                <h2>Our Campus at a Glance</h2>
+                <p style="color: rgba(255,255,255,0.9);">Modern facilities designed for holistic education</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>15+</h3>
+                    <p>Well-equipped Classrooms</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3</h3>
+                    <p>Science Laboratories</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1</h3>
+                    <p>Computer Lab</p>
+                </div>
+                <div class="stat-item">
+                    <h3>18:1</h3>
+                    <p>Student-Teacher Ratio</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5000+</h3>
+                    <p>Books in Library</p>
+                </div>
+                <div class="stat-item">
+                    <h3>2</h3>
+                    <p>Sports Grounds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Facilities -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Academic Facilities</h2>
+                <p>State-of-the-art learning environments</p>
+            </div>
+            
+            <div class="infrastructure-grid">
+                <div class="facility-card">
+                    <div class="facility-image">🏫</div>
+                    <div class="facility-content">
+                        <h3>Smart Classrooms</h3>
+                        <p>Modern classrooms equipped with interactive whiteboards, projectors, and audio-visual systems to enhance learning experience.</p>
+                        <ul class="facility-features">
+                            <li>Air-conditioned classrooms</li>
+                            <li>Interactive whiteboards</li>
+                            <li>Digital projectors</li>
+                            <li>Comfortable seating arrangements</li>
+                            <li>Natural lighting and ventilation</li>
+                            <li>WiFi connectivity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">🔬</div>
+                    <div class="facility-content">
+                        <h3>Science Laboratories</h3>
+                        <p>Well-equipped physics, chemistry, and biology labs for hands-on learning and practical experiments.</p>
+                        <ul class="facility-features">
+                            <li>Physics Laboratory</li>
+                            <li>Chemistry Laboratory</li>
+                            <li>Biology Laboratory</li>
+                            <li>Safety equipment and protocols</li>
+                            <li>Modern instruments and apparatus</li>
+                            <li>Individual workstations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">💻</div>
+                    <div class="facility-content">
+                        <h3>Computer Laboratory</h3>
+                        <p>Modern computer lab with latest systems and software for digital literacy and programming education.</p>
+                        <ul class="facility-features">
+                            <li>Latest desktop computers</li>
+                            <li>High-speed internet connection</li>
+                            <li>Educational software</li>
+                            <li>Programming tools</li>
+                            <li>Individual computer access</li>
+                            <li>Air-conditioned environment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">📚</div>
+                    <div class="facility-content">
+                        <h3>Library & Reading Room</h3>
+                        <p>Comprehensive library with extensive collection of books, magazines, and digital resources for all age groups.</p>
+                        <ul class="facility-features">
+                            <li>5000+ books collection</li>
+                            <li>Reference books and encyclopedias</li>
+                            <li>Magazines and newspapers</li>
+                            <li>Digital library access</li>
+                            <li>Quiet reading areas</li>
+                            <li>Librarian assistance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">🎨</div>
+                    <div class="facility-content">
+                        <h3>Art & Craft Room</h3>
+                        <p>Creative space equipped with art supplies and materials for developing artistic talents and creativity.</p>
+                        <ul class="facility-features">
+                            <li>Art and craft supplies</li>
+                            <li>Drawing and painting materials</li>
+                            <li>Clay modeling station</li>
+                            <li>Display boards for artwork</li>
+                            <li>Natural lighting</li>
+                            <li>Storage for student projects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">🎵</div>
+                    <div class="facility-content">
+                        <h3>Music & Dance Room</h3>
+                        <p>Dedicated space for music and dance classes with proper acoustics and equipment for cultural activities.</p>
+                        <ul class="facility-features">
+                            <li>Musical instruments</li>
+                            <li>Sound system and microphones</li>
+                            <li>Dance practice mirrors</li>
+                            <li>Proper acoustics</li>
+                            <li>Performance space</li>
+                            <li>Storage for instruments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports & Recreation -->
+    <section class="academics" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sports & Recreation</h2>
+                <p>Physical fitness and sports development facilities</p>
+            </div>
+            
+            <div class="infrastructure-grid">
+                <div class="facility-card">
+                    <div class="facility-image">⚽</div>
+                    <div class="facility-content">
+                        <h3>Sports Ground</h3>
+                        <p>Large outdoor sports ground for various games and physical education activities.</p>
+                        <ul class="facility-features">
+                            <li>Football field</li>
+                            <li>Cricket pitch</li>
+                            <li>Basketball court</li>
+                            <li>Volleyball court</li>
+                            <li>Running track</li>
+                            <li>Sports equipment storage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">🏓</div>
+                    <div class="facility-content">
+                        <h3>Indoor Games</h3>
+                        <p>Indoor sports facilities for table tennis, chess, and other recreational activities.</p>
+                        <ul class="facility-features">
+                            <li>Table tennis tables</li>
+                            <li>Chess boards</li>
+                            <li>Carom boards</li>
+                            <li>Badminton court</li>
+                            <li>Fitness equipment</li>
+                            <li>Climate-controlled environment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">🏊</div>
+                    <div class="facility-content">
+                        <h3>Playground</h3>
+                        <p>Safe and secure playground area specifically designed for younger children with age-appropriate equipment.</p>
+                        <ul class="facility-features">
+                            <li>Swings and slides</li>
+                            <li>Climbing equipment</li>
+                            <li>Sandbox area</li>
+                            <li>Safety flooring</li>
+                            <li>Shaded seating areas</li>
+                            <li>Boundary fencing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Facilities -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Support Facilities</h2>
+                <p>Essential services for student comfort and safety</p>
+            </div>
+            
+            <div class="infrastructure-grid">
+                <div class="facility-card">
+                    <div class="facility-image">🏥</div>
+                    <div class="facility-content">
+                        <h3>Medical Room</h3>
+                        <p>First aid facility with trained staff to handle medical emergencies and routine health check-ups.</p>
+                        <ul class="facility-features">
+                            <li>Qualified medical staff</li>
+                            <li>First aid equipment</li>
+                            <li>Emergency medical supplies</li>
+                            <li>Health monitoring</li>
+                            <li>Parent notification system</li>
+                            <li>Emergency contact protocols</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">🍽️</div>
+                    <div class="facility-content">
+                        <h3>Cafeteria</h3>
+                        <p>Hygienic cafeteria serving nutritious meals and snacks prepared with care and quality ingredients.</p>
+                        <ul class="facility-features">
+                            <li>Nutritious meal plans</li>
+                            <li>Hygienic food preparation</li>
+                            <li>Comfortable seating</li>
+                            <li>Variety of healthy options</li>
+                            <li>Special dietary accommodations</li>
+                            <li>Clean drinking water</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">🚌</div>
+                    <div class="facility-content">
+                        <h3>Transportation</h3>
+                        <p>Safe and reliable school bus service covering various routes in and around Rayadurg.</p>
+                        <ul class="facility-features">
+                            <li>GPS-tracked buses</li>
+                            <li>Trained drivers and attendants</li>
+                            <li>Safety protocols</li>
+                            <li>Multiple routes</li>
+                            <li>Parent communication system</li>
+                            <li>Emergency contact procedures</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">🔒</div>
+                    <div class="facility-content">
+                        <h3>Security & Safety</h3>
+                        <p>Comprehensive security system ensuring a safe and secure environment for all students and staff.</p>
+                        <ul class="facility-features">
+                            <li>CCTV surveillance</li>
+                            <li>Trained security personnel</li>
+                            <li>Visitor management system</li>
+                            <li>Emergency evacuation procedures</li>
+                            <li>Fire safety equipment</li>
+                            <li>24/7 monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">💧</div>
+                    <div class="facility-content">
+                        <h3>Utilities & Maintenance</h3>
+                        <p>Well-maintained infrastructure with modern utilities ensuring comfortable learning environment.</p>
+                        <ul class="facility-features">
+                            <li>24/7 electricity backup</li>
+                            <li>Clean drinking water</li>
+                            <li>Proper drainage system</li>
+                            <li>Waste management</li>
+                            <li>Regular maintenance</li>
+                            <li>Green campus initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facility-card">
+                    <div class="facility-image">🌿</div>
+                    <div class="facility-content">
+                        <h3>Green Campus</h3>
+                        <p>Eco-friendly campus with gardens, trees, and environmental conservation initiatives.</p>
+                        <ul class="facility-features">
+                            <li>Botanical garden</li>
+                            <li>Tree plantation drives</li>
+                            <li>Water conservation</li>
+                            <li>Waste segregation</li>
+                            <li>Solar energy initiatives</li>
+                            <li>Environmental education</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Tour -->
+    <section class="academics" style="background: linear-gradient(135deg, #3498db, #2c3e50); color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Experience Our Campus</h2>
+                <p style="color: rgba(255,255,255,0.9);">Schedule a visit to see our facilities firsthand</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🏫</div>
+                    <h3>Campus Tour</h3>
+                    <p>Visit our campus to explore facilities and meet our team. Tours available Monday to Saturday.</p>
+                    <a href="/contact" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Schedule a Visit</a>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📞</div>
+                    <h3>Contact Us</h3>
+                    <p>Have questions about our facilities? Our team is ready to provide detailed information.</p>
+                    <a href="/contact" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Get in Touch</a>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📝</div>
+                    <h3>Apply Now</h3>
+                    <p>Ready to join our school community? Start your admission process today.</p>
+                    <a href="/admissions" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Apply for Admission</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Our School</h3>
+                    <p>Sree Vinayasree Vidyanikethan is committed to providing quality education in a nurturing environment. We focus on academic excellence, character development, and holistic growth of every student.</p>
+                    <div class="social-links" style="margin-top: 1rem;">
+                        <a href="#" aria-label="Facebook">📘 Facebook</a>
+                        <a href="#" aria-label="Instagram">📷 Instagram</a>
+                        <a href="#" aria-label="YouTube">📺 YouTube</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/academics">Academics</a></li>
+                        <li><a href="/academics/kindergarten">Kindergarten</a></li>
+                        <li><a href="/admissions">Admissions</a></li>
+                        <li><a href="/facilities">Campus Facilities</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Facilities</h3>
+                    <ul>
+                        <li><a href="#">Smart Classrooms</a></li>
+                        <li><a href="#">Science Laboratories</a></li>
+                        <li><a href="#">Computer Lab</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Sports Facilities</a></li>
+                        <li><a href="#">Transportation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong><br>
+                    Lakshmi Bazar, Rayadurg-515865<br>
+                    Anantapur District, Andhra Pradesh</p>
+                    
+                    <p><strong>School Code:</strong> 28221890931</p>
+                    
+                    <p><strong>Timings:</strong><br>
+                    Monday to Saturday: 9:00 AM onwards</p>
+                    
+                    <p><strong>Email:</strong> info@sreevinayasree.edu.in</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sree Vinayasree Vidyanikethan. All rights reserved. | Designed with ❤️ for Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

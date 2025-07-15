@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admissions at Sree Vinayasree Vidyanikethan - Join our school family. Application process, requirements, and fee structure">
+    <title>Admissions - Sree Vinayasree Vidyanikethan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .admission-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .fee-table th,
+        .fee-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .fee-table th {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            font-weight: 600;
+        }
+
+        .fee-table tr:hover {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span>📍 Lakshmi Bazar, Rayadurg-515865</span>
+                        <span>📞 School Code: 28221890931</span>
+                        <span>⏰ Opens at 9:00 AM</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                        <a href="#" aria-label="Email">✉️</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <div>
+                        <h1>Sree Vinayasree Vidyanikethan</h1>
+                        <p>Excellence in Education Since Years</p>
+                    </div>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/academics">Academics</a></li>
+                        <li><a href="/admissions">Admissions</a></li>
+                        <li><a href="/facilities">Facilities</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admissions Hero -->
+    <section class="hero" style="height: 60vh; margin-top: 120px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Join Our School Family</h1>
+                <p>Begin Your Child's Journey of Excellence with Us</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Admission Process</h2>
+                <p>Simple and transparent admission procedure</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Step 1: Application</h3>
+                    <p>Fill out the admission form with all required details and submit along with necessary documents.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Step 2: Document Verification</h3>
+                    <p>Submit required documents for verification. Our office will review all submitted materials.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Step 3: Interaction</h3>
+                    <p>Meet with our academic team for a brief interaction to understand your child's needs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Step 4: Confirmation</h3>
+                    <p>Upon selection, complete the admission process with fee payment and final documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Required Documents -->
+    <section class="academics">
+        <div class="container">
+            <div class="section-title">
+                <h2>Required Documents</h2>
+                <p>Please prepare the following documents for admission</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-image">🆔</div>
+                    <div class="program-content">
+                        <h3>Student Documents</h3>
+                        <ul class="program-features">
+                            <li>Birth Certificate (Original + Photocopy)</li>
+                            <li>Previous School Records (if applicable)</li>
+                            <li>Transfer Certificate (if applicable)</li>
+                            <li>Medical Certificate</li>
+                            <li>Recent Passport Size Photos (4 copies)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-image">👨‍👩‍👧‍👦</div>
+                    <div class="program-content">
+                        <h3>Parent Documents</h3>
+                        <ul class="program-features">
+                            <li>Aadhar Card (Both Parents)</li>
+                            <li>Address Proof</li>
+                            <li>Income Certificate</li>
+                            <li>Caste Certificate (if applicable)</li>
+                            <li>Parent Photo ID</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-image">📋</div>
+                    <div class="program-content">
+                        <h3>Additional Requirements</h3>
+                        <ul class="program-features">
+                            <li>Completed Application Form</li>
+                            <li>Fee Payment Receipt</li>
+                            <li>Emergency Contact Details</li>
+                            <li>Medical History Form</li>
+                            <li>Transportation Form (if required)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Structure -->
+    <section class="features" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fee Structure</h2>
+                <p>Transparent and affordable fee structure for quality education</p>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="fee-table">
+                <thead>
+                    <tr>
+                        <th>Class/Grade</th>
+                        <th>Annual Tuition Fee</th>
+                        <th>Admission Fee</th>
+                        <th>Annual Fee</th>
+                        <th>Total (First Year)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Playgroup</td>
+                        <td>₹15,000</td>
+                        <td>₹2,000</td>
+                        <td>₹3,000</td>
+                        <td>₹20,000</td>
+                    </tr>
+                    <tr>
+                        <td>Pre-KG</td>
+                        <td>₹18,000</td>
+                        <td>₹2,000</td>
+                        <td>₹3,000</td>
+                        <td>₹23,000</td>
+                    </tr>
+                    <tr>
+                        <td>LKG - UKG</td>
+                        <td>₹20,000</td>
+                        <td>₹2,500</td>
+                        <td>₹3,500</td>
+                        <td>₹26,000</td>
+                    </tr>
+                    <tr>
+                        <td>Class I - V</td>
+                        <td>₹25,000</td>
+                        <td>₹3,000</td>
+                        <td>₹4,000</td>
+                        <td>₹32,000</td>
+                    </tr>
+                    <tr>
+                        <td>Class VI - VIII</td>
+                        <td>₹30,000</td>
+                        <td>₹3,500</td>
+                        <td>₹4,500</td>
+                        <td>₹38,000</td>
+                    </tr>
+                    <tr>
+                        <td>Class IX - X</td>
+                        <td>₹35,000</td>
+                        <td>₹4,000</td>
+                        <td>₹5,000</td>
+                        <td>₹44,000</td>
+                    </tr>
+                </tbody>                </table>
+            </div>
+            
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin-top: 2rem;">
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Additional Information:</h3>
+                <ul style="color: #666; line-height: 1.8;">
+                    <li>📅 <strong>Payment Schedule:</strong> Fees can be paid annually, biannually, or quarterly</li>
+                    <li>🏷️ <strong>Discounts:</strong> Sibling discount of 10% on tuition fee for second child</li>
+                    <li>📚 <strong>Includes:</strong> Books, uniform, and basic stationery for the first year</li>
+                    <li>🚌 <strong>Transportation:</strong> Optional bus service available (additional charges apply)</li>
+                    <li>🍽️ <strong>Meals:</strong> Nutritious meal plans available (additional charges apply)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Admission Form -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Online Admission Application</h2>
+                <p>Fill out the form below to start your admission process</p>
+            </div>
+            
+            <div class="admission-form">
+                <form id="admissionForm">
+                    <h3 style="color: #2c3e50; margin-bottom: 2rem;">Student Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentName">Student Full Name <span class="required">*</span></label>
+                            <input type="text" id="studentName" name="studentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth <span class="required">*</span></label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gender">Gender <span class="required">*</span></label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="admissionClass">Class/Grade Seeking Admission <span class="required">*</span></label>
+                            <select id="admissionClass" name="admissionClass" required>
+                                <option value="">Select Class</option>
+                                <option value="playgroup">Playgroup</option>
+                                <option value="pre-kg">Pre-KG</option>
+                                <option value="lkg">LKG</option>
+                                <option value="ukg">UKG</option>
+                                <option value="class-1">Class I</option>
+                                <option value="class-2">Class II</option>
+                                <option value="class-3">Class III</option>
+                                <option value="class-4">Class IV</option>
+                                <option value="class-5">Class V</option>
+                                <option value="class-6">Class VI</option>
+                                <option value="class-7">Class VII</option>
+                                <option value="class-8">Class VIII</option>
+                                <option value="class-9">Class IX</option>
+                                <option value="class-10">Class X</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <h3 style="color: #2c3e50; margin: 2rem 0 1rem;">Parent Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name <span class="required">*</span></label>
+                            <input type="text" id="fatherName" name="fatherName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="motherName">Mother's Name <span class="required">*</span></label>
+                            <input type="text" id="motherName" name="motherName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parentEmail">Email Address <span class="required">*</span></label>
+                            <input type="email" id="parentEmail" name="parentEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="parentPhone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="parentPhone" name="parentPhone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Complete Address <span class="required">*</span></label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="previousSchool">Previous School (if any)</label>
+                            <input type="text" id="previousSchool" name="previousSchool">
+                        </div>
+                        <div class="form-group">
+                            <label for="transportRequired">Transportation Required?</label>
+                            <select id="transportRequired" name="transportRequired">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalInfo">Additional Information/Special Requirements</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="3" placeholder="Any medical conditions, learning requirements, or other information we should know..."></textarea>
+                    </div>
+                    
+                    <div style="background: #e8f6ff; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                        <h4 style="color: #2c3e50; margin-bottom: 1rem;">📋 Next Steps After Submission:</h4>
+                        <ol style="color: #666; line-height: 1.6;">
+                            <li>You will receive a confirmation email with application number</li>
+                            <li>Our admission team will contact you within 2 working days</li>
+                            <li>Schedule a meeting for document verification</li>
+                            <li>Complete the admission process</li>
+                        </ol>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                        Submit Admission Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="academics" style="background: linear-gradient(135deg, #3498db, #2c3e50); color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Need Help with Admissions?</h2>
+                <p style="color: rgba(255,255,255,0.9);">Our admission team is here to assist you</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                    <h3>📞 Call Us</h3>
+                    <p>Admission Office<br>Available during school hours</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                    <h3>📧 Email Us</h3>
+                    <p>admissions@sreevinayasree.edu.in<br>Quick response guaranteed</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                    <h3>🏫 Visit Us</h3>
+                    <p>Lakshmi Bazar, Rayadurg-515865<br>Monday to Saturday: 9 AM - 4 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Our School</h3>
+                    <p>Sree Vinayasree Vidyanikethan is committed to providing quality education in a nurturing environment. We focus on academic excellence, character development, and holistic growth of every student.</p>
+                    <div class="social-links" style="margin-top: 1rem;">
+                        <a href="#" aria-label="Facebook">📘 Facebook</a>
+                        <a href="#" aria-label="Instagram">📷 Instagram</a>
+                        <a href="#" aria-label="YouTube">📺 YouTube</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/academics">Academics</a></li>
+                        <li><a href="/academics/kindergarten">Kindergarten</a></li>
+                        <li><a href="/admissions">Admissions</a></li>
+                        <li><a href="/facilities">Campus Facilities</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Academic Programs</h3>
+                    <ul>
+                        <li><a href="#">Playgroup</a></li>
+                        <li><a href="#">Pre-Kindergarten</a></li>
+                        <li><a href="#">Primary Education</a></li>
+                        <li><a href="#">Upper Primary</a></li>
+                        <li><a href="#">Secondary Education</a></li>
+                        <li><a href="#">Co-curricular Activities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong><br>
+                    Lakshmi Bazar, Rayadurg-515865<br>
+                    Anantapur District, Andhra Pradesh</p>
+                    
+                    <p><strong>School Code:</strong> 28221890931</p>
+                    
+                    <p><strong>Timings:</strong><br>
+                    Monday to Saturday: 9:00 AM onwards</p>
+                    
+                    <p><strong>Email:</strong> info@sreevinayasree.edu.in</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sree Vinayasree Vidyanikethan. All rights reserved. | Designed with ❤️ for Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Announcements - Sree Vinayasree Vidyanikethan</title>
+    <meta name="description" content="Latest news, announcements, and events from Sree Vinayasree Vidyanikethan. Stay updated with school activities and important information.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .news-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #2c5aa0, #1e3d6f);
+            color: white;
+            border-radius: 10px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        .news-category {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 15px 0 10px 15px;
+        }
+        .category-announcement {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        .category-event {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        .category-achievement {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        .category-notice {
+            background-color: #fecaca;
+            color: #991b1b;
+        }
+        .news-content {
+            padding: 0 20px 20px;
+        }
+        .news-title {
+            color: #2c5aa0;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .news-date {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .news-excerpt {
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .read-more {
+            color: #2c5aa0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .read-more:hover {
+            color: #1e3d6f;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6b7280;
+        }
+        .no-news {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6b7280;
+        }
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .filter-tab {
+            padding: 10px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 25px;
+            background: white;
+            color: #6b7280;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .filter-tab.active,
+        .filter-tab:hover {
+            border-color: #2c5aa0;
+            color: #2c5aa0;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span>📍 Lakshmi Bazar, Rayadurg-515865</span>
+                        <span>📞 School Code: 28221890931</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <a href="/">
+                        <img src="images/logo.png" alt="Sree Vinayasree Vidyanikethan Logo" class="logo">
+                        <span class="school-name">Sree Vinayasree Vidyanikethan</span>
+                    </a>
+                </div>
+                <ul class="nav-menu main-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/academics">Academics</a></li>
+                    <li><a href="/admissions">Admissions</a></li>
+                    <li><a href="/facilities">Facilities</a></li>
+                    <li><a href="/news" class="active">News</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- News Content -->
+    <main class="news-container">
+        <div class="news-header">
+            <h1>📰 News & Announcements</h1>
+            <p>Stay updated with the latest news, events, and important announcements from our school</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <div class="filter-tab active" data-category="all">All News</div>
+            <div class="filter-tab" data-category="announcement">Announcements</div>
+            <div class="filter-tab" data-category="event">Events</div>
+            <div class="filter-tab" data-category="achievement">Achievements</div>
+            <div class="filter-tab" data-category="notice">Notices</div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <p>Loading news articles...</p>
+        </div>
+
+        <!-- News Grid -->
+        <div id="newsGrid" class="news-grid" style="display: none;">
+            <!-- News articles will be loaded here -->
+        </div>
+
+        <!-- No News State -->
+        <div id="noNews" class="no-news" style="display: none;">
+            <h3>📰 No News Available</h3>
+            <p>There are currently no news articles to display. Please check back later.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sree Vinayasree Vidyanikethan</h3>
+                    <p>Excellence in Education</p>
+                    <p>📍 Lakshmi Bazar, Rayadurg-515865</p>
+                    <p>📞 School Code: 28221890931</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/admissions">Admissions</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>News & Updates</h3>
+                    <ul>
+                        <li><a href="/news">Latest News</a></li>
+                        <li><a href="/news?category=event">Events</a></li>
+                        <li><a href="/news?category=announcement">Announcements</a></li>
+                        <li><a href="/news?category=achievement">Achievements</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sree Vinayasree Vidyanikethan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        let allNews = [];
+        let currentFilter = 'all';
+
+        // Load news articles
+        async function loadNews() {
+            try {
+                const response = await fetch('/api/public/news');
+                const result = await response.json();
+                
+                if (result.success) {
+                    allNews = result.data;
+                    displayNews(allNews);
+                } else {
+                    showNoNews();
+                }
+            } catch (error) {
+                console.error('Error loading news:', error);
+                showNoNews();
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+
+        // Display news articles
+        function displayNews(newsArray) {
+            const newsGrid = document.getElementById('newsGrid');
+            const noNews = document.getElementById('noNews');
+
+            if (newsArray.length === 0) {
+                showNoNews();
+                return;
+            }
+
+            newsGrid.innerHTML = '';
+            newsGrid.style.display = 'grid';
+            noNews.style.display = 'none';
+
+            newsArray.forEach(article => {
+                const newsCard = createNewsCard(article);
+                newsGrid.appendChild(newsCard);
+            });
+        }
+
+        // Create news card element
+        function createNewsCard(article) {
+            const card = document.createElement('div');
+            card.className = 'news-card';
+            
+            const formattedDate = new Date(article.date).toLocaleDateString('en-IN', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            card.innerHTML = `
+                <div class="news-category category-${article.category}">${article.category}</div>
+                <div class="news-content">
+                    <h3 class="news-title">${article.title}</h3>
+                    <div class="news-date">📅 ${formattedDate}</div>
+                    <p class="news-excerpt">${article.content}</p>
+                    <a href="#" class="read-more" onclick="viewFullArticle(${article.id})">Read More →</a>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Show no news state
+        function showNoNews() {
+            document.getElementById('newsGrid').style.display = 'none';
+            document.getElementById('noNews').style.display = 'block';
+        }
+
+        // Filter news by category
+        function filterNews(category) {
+            currentFilter = category;
+            
+            // Update active tab
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`[data-category="${category}"]`).classList.add('active');
+
+            // Filter and display news
+            const filteredNews = category === 'all' 
+                ? allNews 
+                : allNews.filter(article => article.category === category);
+            
+            displayNews(filteredNews);
+        }
+
+        // View full article (placeholder)
+        function viewFullArticle(articleId) {
+            alert(`Opening full article with ID: ${articleId}\n\nThis would navigate to a detailed article page in a full implementation.`);
+        }
+
+        // Set up filter tabs
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load news on page load
+            loadNews();
+
+            // Set up filter tab clicks
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    filterNews(category);
+                });
+            });
+
+            // Check URL parameters for initial filter
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            if (categoryParam && ['announcement', 'event', 'achievement', 'notice'].includes(categoryParam)) {
+                setTimeout(() => filterNews(categoryParam), 500);
+            }
+        });
+
+        // Auto-refresh news every 5 minutes
+        setInterval(loadNews, 5 * 60 * 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Sree Vinayasree Vidyanikethan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-content {
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .error-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .back-home {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-message {
+                font-size: 1.3rem;
+            }
+            
+            .error-description {
+                font-size: 1rem;
+            }
+            
+            .error-page {
+                padding: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 3.5rem;
+            }
+            
+            .error-message {
+                font-size: 1.1rem;
+            }
+            
+            .error-description {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .error-content {
+                padding: 1rem;
+            }
+            
+            .back-home {
+                padding: 15px 25px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .quick-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .quick-links a {
+                display: block;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-message">Page Not Found</h1>
+            <p class="error-description">
+                Sorry, the page you are looking for doesn't exist or has been moved. 
+                Please check the URL or navigate back to our homepage.
+            </p>
+            <a href="/" class="back-home">Back to Homepage</a>
+            
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                <h3>Quick Links</h3>
+                <div class="quick-links" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+                    <a href="/" style="color: #f39c12; text-decoration: none;">🏠 Home</a>
+                    <a href="/about" style="color: #f39c12; text-decoration: none;">📖 About</a>
+                    <a href="/academics" style="color: #f39c12; text-decoration: none;">📚 Academics</a>
+                    <a href="/contact" style="color: #f39c12; text-decoration: none;">📞 Contact</a>
+                    <a href="/admissions" style="color: #f39c12; text-decoration: none;">📝 Admissions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Log 404 error for analytics
+        console.log('404 Error:', window.location.href);
+        
+        // Optional: Send 404 data to analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_not_found', {
+                'page_url': window.location.href
+            });
+        }
+    </script>
+</body>
+</html>

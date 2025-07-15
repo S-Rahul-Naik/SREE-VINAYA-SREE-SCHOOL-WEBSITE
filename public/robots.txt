@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://sreevinayasreevidyanikethan.edu.in/sitemap.xml
+
+# Disallow paths (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay for general bots
+Crawl-delay: 1
